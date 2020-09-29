@@ -1,0 +1,62 @@
+.logo {
+  --size: 2.2rem;
+  --stroke-width: 5px;
+  --color: #4ecdc4;
+  display: flex;
+}
+
+.g,
+.b {
+  display: inline-block;
+  height: var(--size);
+  width: var(--size);
+  box-sizing: border-box;
+}
+
+.g {
+  border-radius: 50%;
+  border: var(--stroke-width) solid var(--color);
+  background-image: linear-gradient(
+    to bottom,
+    transparent calc(50% + calc(var(--stroke-width) / 2)),
+    var(--color) calc(50% + calc(var(--stroke-width) / 2))
+  );
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(50% - calc(var(--stroke-width) / 2)),
+    calc(var(--stroke-width) * 1.5) calc(50% - var(--stroke-width) / 2),
+    calc(var(--stroke-width) * 1.5) calc(50% + calc(var(--stroke-width) / 2)),
+    100% calc(50% + calc(var(--stroke-width) / 2)),
+    100% 100%,
+    0 100%
+  );
+  margin-right: var(--stroke-width);
+}
+
+.b {
+  position: relative;
+  border-radius: calc(var(--stroke-width) / 2);
+}
+.b::before,
+.b::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(50% - calc(var(--stroke-width) / 2));
+  background-color: var(--color);
+
+  border-top-right-radius: calc(var(--stroke-width) / 2);
+  border-bottom-right-radius: calc(var(--stroke-width) / 2);
+}
+.b::before {
+  top: 0;
+  border-top-left-radius: calc(var(--stroke-width) / 2);
+}
+
+.b::after {
+  bottom: 0;
+  border-bottom-left-radius: calc(var(--stroke-width) / 2);
+}
