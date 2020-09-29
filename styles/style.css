@@ -53,6 +53,18 @@ p {
   margin-bottom: 1.8rem;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.75rem;
+  }
+  p {
+    font-size: 2.2rem;
+  }
+}
+
 a {
   color: inherit;
 }
@@ -95,6 +107,19 @@ section {
 
 .site__navigation ul li:not(:last-child) {
   margin-right: 2.4rem;
+}
+
+@media (max-width: 768px) {
+  .site__navigation {
+    font-size: 1.5rem;
+    padding-top: 2.5rem;
+  }
+  .site__navigation ul {
+    justify-content: space-between;
+  }
+  .site__navigation ul li:not(:last-child) {
+    margin-right: none;
+  }
 }
 
 .page-container main {
