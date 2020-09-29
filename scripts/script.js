@@ -69,3 +69,11 @@ window.onload = () => {
     'body'
   ).style.backgroundImage = getRandomBackgroundSvg();
 };
+
+function handleToggleNav() {
+  console.log('TOGGLE NAVVVV');
+
+  const nav = document.querySelector('.site__navigation');
+  console.log(nav);
+  nav.classList.toggle('open');
+}

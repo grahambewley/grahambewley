@@ -19,7 +19,21 @@
             <li><a href="/projects">Projects</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
+          <button
+            onclick="{handleToggleNav()}"
+            aria-label="close navigation"
+            class="site__navigation-close"
+          >
+            <span class="site__navigation-close-symbol"></span>
+          </button>
         </nav>
+        <button
+          class="site__navigation-open"
+          aria-label="toggle navigation"
+          onclick="{handleToggleNav()}"
+        >
+          <span class="site__navigation-open-symbol"></span>
+        </button>
       </header>
 
       <main>

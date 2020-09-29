@@ -69,11 +69,6 @@ section {
   margin: 0 auto;
   padding: 0 1rem;
   position: relative;
-
-  /* min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 
 .site__navigation {
@@ -83,6 +78,17 @@ section {
   font-size: 1.2rem;
   font-style: italic;
   text-transform: uppercase;
+}
+.site__navigation-open,
+.site__navigation-close {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  outline: none;
+  border: none;
+
+  display: none;
 }
 
 .site__navigation ul {
@@ -97,6 +103,41 @@ section {
 
 .site__navigation ul li:not(:last-child) {
   margin-right: 2.4rem;
+}
+
+.site__navigation-close-symbol,
+.site__navigation-open-symbol {
+  display: block;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+}
+.site__navigation-open-symbol::before,
+.site__navigation-open-symbol::after,
+.site__navigation-close-symbol::before,
+.site__navigation-close-symbol::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 3px;
+  border-radius: 20px;
+  background-color: var(--color-text-light-1);
+}
+.site__navigation-open-symbol::after {
+  top: 10px;
+  width: 1.5rem;
+}
+.site__navigation-close-symbol::before {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.site__navigation-close-symbol::after {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .page-container main {
@@ -139,14 +180,42 @@ section {
     font-size: 1.35rem;
   }
 
-  .site__navigation {
-    padding-top: 2.5rem;
+  .site__navigation-open,
+  .site__navigation-close {
+    display: block;
   }
+
+  .site__navigation {
+    width: 100%;
+    background-color: var(--color-dark-blue);
+    left: 0;
+    padding: 5rem 1rem 2.5rem 1rem;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: all 0.65s;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  }
+  .site__navigation.open {
+    transform: translateY(0);
+  }
+
   .site__navigation ul {
     flex-direction: column;
   }
+
   .site__navigation ul li:not(:last-child) {
     margin-right: none;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-container main {
+    padding-top: 6rem;
+  }
+
+  .project__details p {
+    font-size: 1.05rem;
+  }
+  .project__links a {
+    font-size: 1.05rem;
   }
 }
