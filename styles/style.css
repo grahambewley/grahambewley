@@ -129,15 +129,15 @@ section {
 }
 
 @media (max-width: 768px) {
-  /* h1 {
-    font-size: 4rem;
+  h1 {
+    font-size: 2.4rem;
   }
   h2 {
-    font-size: 2.75rem;
+    font-size: 1.65rem;
   }
   p {
-    font-size: 2.2rem;
-  } */
+    font-size: 1.35rem;
+  }
 
   .site__navigation {
     padding-top: 2.5rem;
