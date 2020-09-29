@@ -1,0 +1,92 @@
+:root {
+  --color-dark-blue: #081620;
+
+  --color-text-light: #c4c7c9;
+  --color-text-light-1: #a6abaf;
+  --color-text-light-2: #7a8186;
+
+  --color-light-blue: #c8dbe4;
+
+  --color-turquoise: #4ecdc4;
+
+  --color-coral: #ff6b6b;
+}
+
+body {
+  font-family: 'Courier Prime', monospace;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; */
+  font-size: 62.5%;
+  color: var(--color-text-light);
+  background-color: var(--color-dark-blue);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  /* background-image is set in Javascript onload */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.site__navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 1rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.site__navigation ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+}
+
+.site__navigation ul li a {
+  text-decoration: none;
+}
+.site__navigation ul li a:hover {
+  color: var(--color-text-light-2);
+}
+
+.site__navigation ul li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.home__header {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 6rem;
+  opacity: 0.85;
+}
+
+.home__details {
+  font-size: 1.8rem;
+  opacity: 0.85;
+}
+
+.home__details.first-line {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
