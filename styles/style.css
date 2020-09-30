@@ -169,6 +169,21 @@ section {
   margin-right: 2rem;
 }
 
+.contact__channel-list {
+  list-style: none;
+  margin: 0;
+  font-size: 1.8rem;
+}
+.contact__channel-item {
+  display: flex;
+  align-items: center;
+}
+.contact__channel-item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.contact__channel-item a {
+  margin-left: 1rem;
+}
 @media (max-width: 768px) {
   h1 {
     font-size: 2.4rem;
@@ -218,5 +233,15 @@ section {
   }
   .project__links a {
     font-size: 1.05rem;
+  }
+
+  .contact__channel-list {
+    font-size: 1.4rem;
+  }
+  .contact__channel-item i {
+    font-size: 1.6rem;
+  }
+  .contact__channel-item a {
+    margin-left: 0.75rem;
   }
 }
