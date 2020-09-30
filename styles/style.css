@@ -1,5 +1,6 @@
 :root {
   --color-dark-blue: #081620;
+  --color-almost-black: #040b10;
 
   --color-text-light: #c4c7c9;
   --color-text-light-1: #a6abaf;
@@ -202,13 +203,13 @@ section {
 
   .site__navigation {
     width: 100%;
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-almost-black);
     left: 0;
-    padding: 5rem 1.5rem 2.5rem 1.5rem;
+    padding: 6rem 1.5rem 2.5rem 1.5rem;
     z-index: 100;
     transform: translateY(-100%);
     transition: all 0.65s;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
     font-size: 1.4rem;
   }
   .site__navigation.open {
