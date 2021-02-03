@@ -177,14 +177,14 @@ section {
   border-radius: 100px;
   color: #eee;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 .project__tech:not(:last-child) {
   margin-right: 10px;
 }
 .project__tech--dark {
   color: #000;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 .project__tech-name {
   display: inline-block;
