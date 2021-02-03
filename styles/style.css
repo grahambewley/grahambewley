@@ -163,6 +163,38 @@ section {
   font-size: 1.4rem;
   margin-bottom: 1rem;
 }
+
+.project__tech-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.project__tech {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.project__tech:not(:last-child) {
+  margin-right: 10px;
+}
+.project__tech--dark {
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.project__tech-name {
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
 .project__links a {
   font-size: 1.4rem;
 }
